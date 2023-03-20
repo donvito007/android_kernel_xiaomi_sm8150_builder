@@ -25,7 +25,7 @@ jobs:
     steps:
       - name: Install Dependencies
         run: |
-          sudo apt-get update && sudo apt-get install -y bison build-essential curl libssl-dev git zip python2 python3 flex libncurses5-dev wget aria2
+          sudo apt-get update && sudo apt-get install -y libc6-dev bison build-essential curl libssl-dev git zip python2 python3 flex libncurses5-dev wget aria2
           sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 1
 
       - name: Checkout
