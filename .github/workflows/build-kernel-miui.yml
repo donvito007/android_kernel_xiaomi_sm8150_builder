@@ -12,8 +12,8 @@ jobs:
   build:
     strategy:
       matrix:
-        #device: [raphael, cepheus]
-        device: [cepheus]
+        device: [raphael, cepheus]
+        #device: [cepheus]
 
     name: Build MIUI-Kernel-${{ matrix.device }}
     runs-on: ubuntu-latest
