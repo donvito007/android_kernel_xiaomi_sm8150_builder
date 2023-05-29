@@ -131,19 +131,19 @@ jobs:
           name: ${{ env.ZIP_NAME }}
           path: anykernel/*
 
-      - name: Release
-        if: success()
-        uses: softprops/action-gh-release@v1
-        with:
-          prerelease: true
-          files: |
-            kernel-source/out/arch/arm64/boot/*
-            ${{ env.ZIP_NAME }}.zip
-          draft: true
-          tag_name: ${{ github.ref }}-${{ matrix.device }}
+      #- name: Release
+      # if: success()
+      #  uses: softprops/action-gh-release@v1
+      #  with:
+      #    prerelease: true
+      #    files: |
+      #      kernel-source/out/arch/arm64/boot/*
+      #      ${{ env.ZIP_NAME }}.zip
+      #    draft: true
+      #    tag_name: ${{ github.ref }}-${{ matrix.device }}
 
-      - name: Delete workflow runs
-        uses: Mattraks/delete-workflow-runs@v2
-        with:
-          retain_days: 0
-          keep_minimum_runs: 10
+     # - name: Delete workflow runs
+     #   uses: Mattraks/delete-workflow-runs@v2
+     #   with:
+     #     retain_days: 0
+     #     keep_minimum_runs: 10
